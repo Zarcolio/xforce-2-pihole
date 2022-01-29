@@ -1,0 +1,11 @@
+[Unit]
+Description=Xforce-2-Pihole
+
+[Service]
+Restart=always
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/bin/bash -c 'pihole -t|/home/pi/xforce-2-pihole.py'
+
+[Install]
+WantedBy=multi-user.target
